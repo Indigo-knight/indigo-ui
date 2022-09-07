@@ -1,0 +1,91 @@
+@class-prefix-button: ~'idg-button';
+.@{class-prefix-button} {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  &:focus {
+    outline: none;
+  }
+  &-block {
+    display: block;
+    width: 100%;
+  }
+  &-large {
+    height: 40px;
+    padding: 6.4px 15px;
+    font-size: 16px;
+  }
+  &-middle {
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+  }
+  &-small {
+    height: 24px;
+    padding: 0 7px;
+    font-size: 14px;
+  }
+  &-primary {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    background: var(--idg-primary-color);
+    border-color: var(--idg-primary-color);
+    box-shadow: 0 2px #0000000b;
+    &:hover {
+      background: var(--idg-hover-color);
+      border-color: var(--idg-hover-color);
+    }
+    &:active {
+      background: var(--idg-active-color);
+      border-color: var(--idg-active-color);
+    }
+    &:disabled {
+      background: #1890ff80;
+      border-color: transparent;
+      cursor: not-allowed;
+    }
+  }
+  &-default {
+    color: #000000d9;
+    background: #fff;
+    border-color: #d9d9d9;
+    box-shadow: 0 2px #00000004;
+    &:hover {
+      color: var(--idg-hover-color);
+      background: #fff;
+      border-color: var(--idg-hover-color);
+    }
+    &:active {
+      color: var(--idg-active-color);
+      background: #fff;
+      border-color: var(--idg-active-color);
+    }
+    &:disabled {
+      color: #00000040;
+      text-shadow: none;
+      background: #f5f5f5;
+      border-color: #d9d9d9;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+  &-link {
+    color: var(--idg-primary-color);
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    &:hover {
+      color: var(--idg-hover-color);
+    }
+    &:active {
+      color: var(--idg-active-color);
+    }
+    &:disabled {
+      color: #00000040;
+      text-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+}

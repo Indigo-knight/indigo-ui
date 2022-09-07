@@ -8,10 +8,14 @@ if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
 }
 export default defineConfig({
   title: 'Indigo UI',
+  logo: '/logo.png',
   mode: 'site',
   outputPath: 'doc-site',
   exportStatic: {},
   dynamicImport: {},
   base,
   publicPath,
+  alias: {
+    demoUtiles: '/src/demoUtils/index.ts',
+  },
 });
