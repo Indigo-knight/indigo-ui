@@ -21,17 +21,17 @@ import { DemoBlock } from 'demoUtiles';
 
 export default () => (
   <>
-    <DemoBlock title="按钮类型">
+    <DemoBlock title="按钮类型" gird>
       <Button>Button</Button>
       <Button type="default">Button</Button>
       <Button type="link">Button</Button>
     </DemoBlock>
-    <DemoBlock title="按钮大小">
+    <DemoBlock title="按钮大小" gird>
       <Button size="large">Button</Button>
       <Button size="middle">Button</Button>
       <Button size="small">Button</Button>
     </DemoBlock>
-    <DemoBlock title="禁用状态">
+    <DemoBlock title="禁用状态" gird>
       <Button disabled>Button</Button>
       <Button type="default" disabled>
         Button

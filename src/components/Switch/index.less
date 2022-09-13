@@ -1,11 +1,33 @@
-.in-outbox {
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: 44px;
-  height: 22px;
-  line-height: 22px;
-  vertical-align: middle;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all 0.2s;
+@class-prefix-switch: ~'idg-switch';
+.@{class-prefix-switch} {
+  &-outbox {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    &.@{class-prefix-switch}-unchecked {
+      background: #e5e5e5;
+    }
+    &.@{class-prefix-switch}-checked {
+      background: var(--idg-primary-color);
+    }
+  }
+  &-innerbox {
+    position: absolute;
+    top: 2px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 20%), 0 2px 11.5px 0 rgb(0 0 0 / 8%),
+      -1px 2px 2px 0 rgb(0 0 0 / 10%);
+    transition: all 0.4s;
+    &.@{class-prefix-switch}-unchecked {
+      left: 2px;
+    }
+    &.@{class-prefix-switch}-checked {
+      left: 22px;
+    }
+  }
 }

@@ -15,5 +15,10 @@ group:
 import React from 'react';
 import { Switch } from 'indigo-ui';
 
-export default () => <Switch />;
+export default () => {
+  const handelChange = (state) => {
+    console.log('>>', state);
+  };
+  return <Switch checked onChange={handelChange} />;
+};
 ```
