@@ -1,16 +1,18 @@
 import React from 'react';
 import styles from './index.less';
 interface DemoBlockProps {
-  gird?: boolean;
+  type?: boolean;
   title?: string;
   children?: React.ReactNode;
 }
 export const DemoBlock = (props: DemoBlockProps) => {
-  const { title = '', gird } = props;
+  const { title = '', type } = props;
   return (
     <div className={styles.demobox}>
       <div className={styles.title}>{title}</div>
-      <div className={`${styles.inner} ${gird ? styles.gird : ''}`}>{props.children}</div>
+      <div className={`${styles.inner} ${type ? styles['flex_' + type] : ''}`}>
+        {props.children}
+      </div>
     </div>
   );
 };

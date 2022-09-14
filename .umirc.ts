@@ -9,6 +9,7 @@ if (process.env.SITE_BUILD_ENV === 'PREVIEW') {
 export default defineConfig({
   title: 'Indigo UI',
   logo: '/logo.png',
+  favicon: '/favicon.ico',
   mode: 'site',
   outputPath: 'doc-site',
   exportStatic: {},

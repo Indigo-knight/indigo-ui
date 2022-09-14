@@ -2,32 +2,39 @@
 .@{class-prefix-switch} {
   &-outbox {
     position: relative;
+    box-sizing: border-box;
     width: 50px;
     height: 30px;
     border-radius: 30px;
     cursor: pointer;
     &.@{class-prefix-switch}-unchecked {
-      background: #e5e5e5;
+      background-color: #fff;
+      border: 2px solid #e5e5e5;
     }
     &.@{class-prefix-switch}-checked {
-      background: var(--idg-primary-color);
+      background-color: var(--idg-primary-color);
+      border: 2px solid var(--idg-primary-color);
+    }
+    &.@{class-prefix-switch}-disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
     }
   }
   &-innerbox {
     position: absolute;
-    top: 2px;
+    top: 0;
     width: 26px;
     height: 26px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 2px 0 rgb(0 0 0 / 20%), 0 2px 11.5px 0 rgb(0 0 0 / 8%),
-      -1px 2px 2px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 11.5px 0 rgba(0, 0, 0, 0.08),
+      -1px 2px 2px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
     &.@{class-prefix-switch}-unchecked {
-      left: 2px;
+      left: 0;
     }
     &.@{class-prefix-switch}-checked {
-      left: 22px;
+      left: 20px;
     }
   }
 }
