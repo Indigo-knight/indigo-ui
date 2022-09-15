@@ -1,0 +1,42 @@
+@class-prefix-tabs: ~'idg-tabs';
+.@{class-prefix-tabs} {
+  &-outbox {
+    display: flex;
+    align-items: center;
+  }
+  &-child {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &.idg-tabs-checked {
+      position: relative;
+      color: rgba(11, 11, 11, 0.8);
+      font-weight: 500;
+      font-size: 18px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      line-height: 20px;
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        width: 69px;
+        height: 4px;
+        margin: 0 auto;
+        background: #000;
+        border-radius: 2px;
+        content: '';
+      }
+    }
+    &.idg-tabs-unchecked {
+      color: rgba(11, 11, 11, 0.8);
+      font-weight: 400;
+      font-size: 14px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+}

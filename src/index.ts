@@ -12,3 +12,4 @@ if (canUseDom) {
 }
 export { default as Switch } from './components/Switch';
 export { default as Button } from './components/Button';
+export { default as Tabs } from './components/Tabs';
